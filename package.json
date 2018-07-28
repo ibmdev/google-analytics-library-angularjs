@@ -5,7 +5,9 @@
     "name": "ibmdev",
     "email": "ibmdev102017@gmail.com"
   },
-  "dependencies": {},
+  "dependencies": {
+    "hoek": "^5.0.3"
+  },
   "devDependencies": {
     "chai": "^4.1.2",
     "chai-jquery": "^2.0.0",
