@@ -1,0 +1,31 @@
+{
+  "generator-angularjs-library": {
+    "props": {
+      "author": {
+        "name": "ibmdev",
+        "email": "ibmdev102017@gmail.com"
+      },
+      "libraryName": {
+        "original": "google-analytics-library-angularjs",
+        "camelized": "googleAnalyticsLibraryAngularjs",
+        "dasherized": "google-analytics-library-angularjs",
+        "slugified": "google-analytics-library-angularjs",
+        "parts": [
+          "google",
+          "analytics",
+          "library",
+          "angularjs"
+        ]
+      },
+      "includeModuleDirectives": true,
+      "includeModuleFilters": true,
+      "includeModuleServices": true,
+      "includeAngularModuleResource": true,
+      "includeAngularModuleCookies": true,
+      "includeAngularModuleSanitize": true,
+      "librarySrcDirectory": "src/google-analytics-library-angularjs",
+      "libraryUnitTestDirectory": "test/unit/google-analytics-library-angularjs",
+      "libraryUnitE2eDirectory": "test/e2e/google-analytics-library-angularjs"
+    }
+  }
+}
