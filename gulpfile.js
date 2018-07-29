@@ -7,32 +7,23 @@ var path = require('path');
 var plumber = require('gulp-plumber');
 var runSequence = require('run-sequence');
 var jshint = require('gulp-jshint');
-
-/**
- * File patterns
- **/
-
-// Root directory
 var rootDirectory = path.resolve('./');
-
-// Source directory for build process
 var sourceDirectory = path.join(rootDirectory, './src');
 
-// tests
+// Tests Karma
 var testDirectory = path.join(rootDirectory, './test/unit');
 
 var sourceFiles = [
 
-  // Make sure module files are handled first
+  // Chargement des modules avant le reste des fichiers javascript
   path.join(sourceDirectory, '/**/*.module.js'),
 
-  // Then add all JavaScript files
+  // Chargement des fichiers javascript
   path.join(sourceDirectory, '/**/*.js')
 ];
 
 var lintFiles = [
   'gulpfile.js',
-  // Karma configuration
   'karma-*.conf.js'
 ].concat(sourceFiles);
 
@@ -47,26 +38,23 @@ gulp.task('build', function() {
 });
 
 /**
- * Process
+ * JSHINT - Tests - Build
  */
 gulp.task('process-all', function (done) {
   runSequence('jshint', 'test-src', 'build', done);
 });
 
 /**
- * Watch task
+ * Watch
  */
 gulp.task('watch', function () {
 
-  // Watch JavaScript files
   // gulp.watch(sourceFiles, ['process-all']);
-
-  // watch test files and re-run unit tests when changed
   // gulp.watch(path.join(testDirectory, '/**/*.js'), ['test-src']);
 });
 
 /**
- * Validate source JavaScript
+ * JSHINT - Validation des sources Javascript
  */
 gulp.task('jshint', function () {
   return gulp.src(lintFiles)
@@ -77,7 +65,7 @@ gulp.task('jshint', function () {
 });
 
 /**
- * Run test once and exit
+ * Lancement des tests
  */
 gulp.task('test-src', function (done) {
   karma.start({
@@ -87,7 +75,7 @@ gulp.task('test-src', function (done) {
 });
 
 /**
- * Run test once and exit
+ * Lancement des tests concaténé
  */
 gulp.task('test-dist-concatenated', function (done) {
   karma.start({
@@ -97,7 +85,7 @@ gulp.task('test-dist-concatenated', function (done) {
 });
 
 /**
- * Run test once and exit
+ * Lancement des tests minimifiés
  */
 gulp.task('test-dist-minified', function (done) {
   karma.start({

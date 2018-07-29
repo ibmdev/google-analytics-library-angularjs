@@ -4,12 +4,11 @@
 module.exports = function(config) {
   config.set({
 
-    // base path that will be used to resolve all patterns (eg. files, exclude)
     basePath: '',
 
 
-    // frameworks to use
-    // available frameworks: https://npmjs.org/browse/keyword/karma-adapter
+    // Frameworks à utiliser
+    // Liste des frameworks disponibles  https://npmjs.org/browse/keyword/karma-adapter
     frameworks: ['mocha', 'chai-jquery', 'jquery-1.8.3', 'sinon-chai'],
 
     plugins: [
@@ -22,7 +21,7 @@ module.exports = function(config) {
       'karma-chai-jquery'
     ],
 
-    // list of files / patterns to load in the browser
+    // Liste des fichiers et sources à charger dans le navigateur
     files: [
       'bower/angular/angular.js',
       'bower/angular-cookies/angular-cookies.js',
@@ -34,14 +33,15 @@ module.exports = function(config) {
     ],
 
 
-    // list of files to exclude
+    // Liste des fichiers à exclure
     exclude: [
     ],
 
 
-    // preprocess matching files before serving them to the browser
-    // available preprocessors: https://npmjs.org/browse/keyword/karma-preprocessor
+    // Liste des ressources à pré-traiter avant de les servir sur le navigateur
+    // Liste des pré-processors disponibles : https://npmjs.org/browse/keyword/karma-preprocessor
     preprocessors: {
+      
     },
 
 

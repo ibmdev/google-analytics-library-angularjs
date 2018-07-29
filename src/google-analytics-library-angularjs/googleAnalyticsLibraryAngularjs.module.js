@@ -1,8 +1,9 @@
 (function (angular) {
 
-  // Create all modules and define dependencies to make sure they exist
-  // and are loaded in the correct order to satisfy dependency injection
-  // before all nested files are concatenated by Gulp
+    // Création de tous les modules et définition des dépendances
+    // pour être qu'ils existent et sont chargés dans l'ordre correct
+    // pour satisfaire l'injection de dépendances avant que les autres
+    // fichiers javascript soient concaténés par Gulp
 
   // Config
   angular.module('googleAnalyticsLibraryAngularjs.config', [])
